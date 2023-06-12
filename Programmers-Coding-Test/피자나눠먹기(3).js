@@ -9,7 +9,7 @@ n명의 사람이 최소 한 조각 이상 피자를 먹으려면 최소 몇 판
 📌 1 ≤ n ≤ 100
 */
 
-function solutions(slice, n) {
+function solution(slice, n) {
   if (slice < 2 || 10 < slice) {
     return "slice error";
   }
