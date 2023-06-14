@@ -11,7 +11,7 @@
 📌 1 ≤ sides의 원소 ≤ 1,000
 */
 
-function solution(sides) {
+function solutions(sides) {
   // if(sides%1!==0 && sides!==Math.floor(sides)){return 'not natural number';}
   if (sides.length !== 3) {
     return "length error";
