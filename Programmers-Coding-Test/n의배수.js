@@ -22,3 +22,5 @@ function solution(num, n) {
     return 0;
   }
 }
+
+// 삼항연산자 쓰는 습관 들일 것
