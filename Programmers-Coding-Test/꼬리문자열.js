@@ -30,4 +30,4 @@ function solution(str_list, ex) {
   return [...answerArray].join("");
 }
 
-// filter에 boolean값으로 작동 가능. join도 눈여겨 볼 것.
+// filter에 boolean값으로 작동 가능. join도 눈여겨 볼 것
