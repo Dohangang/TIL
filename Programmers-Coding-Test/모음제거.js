@@ -24,4 +24,4 @@ function solution(my_string) {
 //   return my_string.replace(/[aeiou]/g, '');
 // }
 
-// 더 간단한 방법, 정규표현식을 사용하여 제외할 수 있는 방법, replace의 활용법
+// 더 간단한 방법, 정규표현식을 사용하여 제외할 수 있는 방법, replace의 활용법.
