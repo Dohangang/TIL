@@ -12,7 +12,11 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const users_module_1 = require("./users/users.module");
 const cats_module_1 = require("./cats/cats.module");
+const logger_middleware_1 = require("./middleware/logger.middleware");
 let AppModule = exports.AppModule = class AppModule {
+    configure(consumer) {
+        consumer.apply(logger_middleware_1.LoggerMiddleware).forRoutes('cats');
+    }
 };
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
