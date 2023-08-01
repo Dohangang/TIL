@@ -26,7 +26,7 @@ function solution(my_string, n) {
 
 // function solution(my_string, n) {
 //   if(my_string<2 || 5<my_string){return 'length error';}
-//   if(n<2 || 10<n){return 'number error';}
+//   if(n<2 || 10<n){return 'numbers error';}
 
 //   const myArray = [...my_string];
 //   let toAnswer = [];
