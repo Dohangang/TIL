@@ -20,4 +20,4 @@ function solution(numbers) {
   return numbers.map((x) => 2 * x);
 }
 
-// reduce를 사용해서도 해결할 수 있다
+// reduce를 사용해서도 해결할 수 있다.
