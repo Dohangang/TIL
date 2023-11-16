@@ -23,3 +23,12 @@ rl.on("line", function (line) {
 });
 
 // 기본 제공 코드가 이상하다.
+
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// }).on('line', function (line) {
+//     const strArr = line.split(' ')
+//     console.log(strArr.join(''))
+// })
