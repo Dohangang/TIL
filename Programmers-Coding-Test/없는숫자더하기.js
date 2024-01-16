@@ -20,6 +20,6 @@ function solution(numbers) {
   return sumOfMissingNumbers;
 }
 
-function solution(numbers) {
-  return 45 - numbers.reduce((cur, acc) => cur + acc, 0);
-}
+// function solution(numbers) {
+//   return 45 - numbers.reduce((cur, acc) => cur + acc, 0);
+// }
