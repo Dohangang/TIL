@@ -27,7 +27,7 @@ function solution(n, m) {
 //   return [b, ab/b];
 // }
 
-// 유클리드 호제법 활용 (a=bq+r, b=rq'+r'  ->  a와 b의 최대공약수가 b와 r의 최대공약수와 같다)
+// 유클리드 호제법 활용  (a=bq+r, b=rq'+r'  ->  a와 b의 최대공약수가 b와 r의 최대공약수와 같다)
 // -> a = bq + r  좌변도 우변도 최대공약수의 곱이다 (a'g = b'gq + r'g,  a'g=a  b'g=b  r'g=r,  g는 최대공약수라고 가정한다.)
 // gcd = Greatest Common Divisor
 // lcm = Least Common Multiple
