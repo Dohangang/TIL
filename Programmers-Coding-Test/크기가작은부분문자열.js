@@ -22,3 +22,5 @@ function solution(t, p) {
 
   return answer;
 }
+
+//substring에 대해 알아볼 것
