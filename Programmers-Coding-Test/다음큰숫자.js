@@ -41,4 +41,5 @@ function solution(n) {
   }
 }
 
+//deprecated된 표시
 solution(78);
