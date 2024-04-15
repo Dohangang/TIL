@@ -20,3 +20,5 @@ function solution(box, n) {
     Math.floor(box[0] / n) * Math.floor(box[1] / n) * Math.floor(box[2] / n)
   );
 }
+
+// 구조분해할당하면 재사용에 용이할 듯
