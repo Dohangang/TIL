@@ -34,4 +34,4 @@ function solution(arr) {
 }
 
 // 유클리드 호제법을 사용한 gcd공식을 사용했다. 정수론, a=bq+r, gcd(a,b)=gcd(b,r)
-// gcd(a,b)=ax+by 도 있으니 유의할 것.
+// gcd(a,b)=ax+by 도 있으니 유의할 것
