@@ -16,6 +16,6 @@ function solution(my_string) {
     .join("");
 }
 
-function solution(s) {
-  return [...s.toLowerCase()].sort().join("");
-}
+// function solution(s) {
+//   return [...s.toLowerCase()].sort().join("");
+// }
