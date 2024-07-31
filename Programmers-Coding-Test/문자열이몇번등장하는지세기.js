@@ -31,3 +31,5 @@ function solution(myString, pat) {
 
 //   return count;
 // }
+
+// while문 확실히 알아보기
