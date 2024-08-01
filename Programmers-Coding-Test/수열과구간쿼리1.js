@@ -30,3 +30,5 @@ function solution(arr, queries) {
 //   });
 //   return arr;
 // }
+
+// git이 문제가 생겨 다시 커밋
