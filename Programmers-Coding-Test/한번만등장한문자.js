@@ -33,3 +33,5 @@ function solution(s) {
 //   for (let c of s) if (s.indexOf(c) === s.lastIndexOf(c)) res.push(c);
 //   return res.sort().join("");
 // }
+
+// indexOf()와 lastIndexOf() 기억하기!
