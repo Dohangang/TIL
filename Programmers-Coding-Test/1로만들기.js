@@ -42,6 +42,7 @@ function solution(num_list) {
 
 // for (let num of num_list) for...of 루프
 
-function solution(num_list) {
-  return num_list.map((v) => v.toString(2).length - 1).reduce((a, c) => a + c);
-}
+// function solution(num_list) {
+//   return num_list.map((v) => v.toString(2).length - 1).reduce((a, c) => a + c);
+// }
+// 2진법으로 풀면 짧아지지만 인수인계는 힘들지도
