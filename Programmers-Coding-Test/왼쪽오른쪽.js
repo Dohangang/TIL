@@ -34,3 +34,5 @@ function solution(str_list) {
 //   }
 //   return [];
 // }
+
+// findIndex(), lastIndexOf()를 기억하기! 앞에서와 뒤에서
