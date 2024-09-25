@@ -29,3 +29,5 @@ function solution(arr) {
 
   return stk;
 }
+
+// array.pop()  →  array의 마지막 요소를 제거하고 반환한다는 것은 return한다는 것이 아니라 그냥 요소만 덩그러니 남겨진다는 것
