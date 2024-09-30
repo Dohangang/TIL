@@ -50,3 +50,12 @@ function solution(ineq, eq, n, m) {
 //   const op = operations[ineq + eq];
 //   return Number(op(n, m));
 // }
+
+// sol4
+// function solution(ineq, eq, n, m) {
+//   var str = (n + ineq + eq + m).replace("!", "");
+//   var answer = eval(str) ? 1 : 0;
+//   return answer;
+// }
+
+// eval이 안좋다는 의견 ++
