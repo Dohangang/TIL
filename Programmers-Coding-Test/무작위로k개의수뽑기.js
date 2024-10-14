@@ -40,3 +40,6 @@ function solution(arr, k) {
 
   return result;
 }
+
+// set.has(value) : Set에 특정 값이 있는지 확인, true false 반환
+// set.add(value) : Set에 새값 추가, 이미 존재하면 안함
