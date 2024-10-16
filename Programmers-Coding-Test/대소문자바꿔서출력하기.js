@@ -34,3 +34,6 @@ rl.on("line", function (line) {
 
   console.log(result);
 });
+
+// name.toUpperCase()  ——>   “NAME”         문자열을 대문자로 출력
+// name.toLowerCase()  ——>   “name”       소문자로 출력
