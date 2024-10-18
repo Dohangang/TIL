@@ -21,3 +21,7 @@ function solution(arr, queries) {
     return result.length > 0 ? Math.min(...result) : -1;
   });
 }
+
+// filter → 조건에 맞는 배열 반환
+// map() → 너무 대충 알고 있음, return 값이 있음, let a = b.map(), b 원본에 변경이 없음
+// forEach() → map과 같이 배열을 순회하지만 return 값이 없음, b.forEach(), b 원본을 변경
