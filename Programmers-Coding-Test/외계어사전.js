@@ -38,3 +38,7 @@ function solution(spell, dic) {
 // function solution(spell, dic) {
 //   return dic.filter((v) => spell.every((c) => v.includes(c))).length ? 1 : 2;
 // }
+
+// 문법
+// array.every()는 배열의 모든 요소가 조건을 충족하는지 확인(AND)
+// array.some() 함수는 배열의 1개 요소라도 특정 조건을 충족하는지 확인(OR)
