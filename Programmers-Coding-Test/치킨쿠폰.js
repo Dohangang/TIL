@@ -27,3 +27,6 @@ function solution(chicken) {
 
 //   return serviceChicken;
 // }
+
+// Math.floor() : 주어진 숫자를 내림하여 정수로 만듦, 소수점 버림
+// parseInt() : 문자열을 정수로 변환, 문자열을 왼쪽부터 읽으면서 숫자를 정수로 변환하고 숫자가 아닌 문자가 나오면 변환을 멈춤 <두 번째 인자로 변환할 진법을 받을 수 있음>
