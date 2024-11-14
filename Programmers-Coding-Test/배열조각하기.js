@@ -40,3 +40,6 @@ function solution(arr, query) {
 //   });
 //   return arr;
 // }
+
+// map() → 너무 대충 알고 있음, return 값이 있음, let a = b.map(), b 원본에 변경이 없음
+// forEach() → map과 같이 배열을 순회하지만 return 값이 없음, b.forEach(), b 원본을 변경
