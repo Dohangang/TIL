@@ -31,3 +31,6 @@ function solution(quiz) {
 
   return answer;
 }
+
+// Object.values(obj) : 객체의 값만을 모아서 배열로 반환하는 메서드
+// Object.keys(obj) : 객체의 키만을 모아서 배열로 반환하는 메서드
