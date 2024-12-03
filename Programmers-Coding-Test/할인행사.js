@@ -64,3 +64,23 @@ function solution(want, number, discount) {
 //   }
 //   return count;
 // }
+
+// Math.floor() → 소수점 첫째 자리에서 내림(버림)
+
+// Math.ceil() → 소수점 첫째 자리에서 올림
+
+// Math.round() → 소수점 첫째 자리에서 반올림
+
+// Math.trunc() → 소수부를 무시
+
+// Math.random() → 0과 1 사이의 난수 반환
+
+// Math.max(a, b, c…) → 최대
+
+// Math.min(a, b, c…) → 최소값 반환
+
+// Math.pow(n, power) → n을 power번 거듭제곱 값 반환
+
+// Math.sqrt(2); // 1.414213562373095
+
+// Math.abs()  →  주어진 숫자의 절대값을 반환합니다, 변수가 두개면 차이를 절대값으로 나타냄
