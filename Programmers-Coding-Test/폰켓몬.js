@@ -43,3 +43,8 @@ function solution(nums) {
 
 //   return arr.length > max ? max : arr.length;
 // }
+
+// key in object : 객체에서 key가 존재하는지 확인하는 연산자, true or false
+//    const pairs = { ')': '(', ']': '[', '}': '{' };
+//    console.log(')' in pairs); // true
+//    console.log('(' in pairs); // false
