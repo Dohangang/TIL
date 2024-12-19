@@ -40,6 +40,11 @@ function solution(progresses, speeds) {
   return answer;
 }
 
+// 기본적으로 과정과 속도를 한번에 shift하는 개념
+// while을 통해 모두 배포될 때까지 함수를 돌림
+// 과정에서 속도를 한번씩 더해가면서 배포가 되는게 있는지 확인
+// 과정의 첫번째 index가 100이 넘으면 과정과 속도의 배열의 처음을 shift하고 count함, 그 때 answer에 몇 개인지 넣어주는 방법임
+
 // function solution(progresses, speeds) {
 //   const days = progresses.map((progress, index) =>
 //     Math.ceil((100 - progress) / speeds[index])
