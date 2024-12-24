@@ -75,6 +75,9 @@ function generateOrders(array, size) {
   return result;
 }
 
+// 모든 탐험을 생성하고 탐색하면서 최대 탐험 수를 찾아내는 형식.
+// 모든 경우의 수를 고려하지 않으면 최대 탐험 수가 아닐 경우가 생길 수 있으므로, 오류를 막기 위해 비효율을 감수한다. 순열을 사용.
+
 // function solution(k, d) {
 //   const N = d.length;
 //   const visited = new Array(N).fill(0);
