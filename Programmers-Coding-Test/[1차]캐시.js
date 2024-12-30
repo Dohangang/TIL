@@ -49,3 +49,11 @@ function solution(cacheSize, cities) {
 
   return totalTime;
 }
+
+// Map 객체 : 키-값 쌍을 저장하는 자료구조, 키에 모든 자료형을 쓸 수 있음, 추가한 순서를 보존
+// map.set('name', 'Alice');  키-값 쌍을 추가 및 업데이트
+// map.get(''name') 키에 연결된 값을 반환
+// map.has('name') 특정 키가 존재하는지 확인 TF
+// map.delete('name') 특정 키-값 쌍을 삭제
+// map.size 저장된 키-값 쌍의 개수를 반환
+// .key()  .values()  .entries()  모든 키 모든 값 모든 키-값배열을 반환
