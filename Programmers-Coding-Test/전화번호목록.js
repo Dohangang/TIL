@@ -48,3 +48,5 @@ function solution(phoneBook) {
 
   return true;
 }
+
+// string.startsWith(찾는 문자열, 시작 인덱스) : string이 찾문으로 시작하면 true 아니면 false
