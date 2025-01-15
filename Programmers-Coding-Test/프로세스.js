@@ -39,3 +39,7 @@ function solution(priorities, location) {
     }
   }
 }
+
+// priorities 배열을 작업하는데 index를 기억해 놓기 위하여 queue에 index와 함께 저장한다.
+// 문제를 따라 배열의 순서대로 확인을 하고 최우선 순위가 아니라면 push를 이용해 뒤로 미룬다.
+// index와 location이 일치할 때, 해당 실행 횟수(order)를 반환해준다.
