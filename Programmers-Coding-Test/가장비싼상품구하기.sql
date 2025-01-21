@@ -21,3 +21,13 @@ SELECT MAX(PRICE) AS MAX_PRICE FROM PRODUCT;
 -- ORDER BY PRICE DESC LIMIT 1;
 
 -- ASC DESC 잊지 말 것
+
+-- ORDER BY
+-- - 결과를 정렬할 때 사용한다. ASC(오름차순) DESC(내림차순)을 사용하여 순서 지정
+-- - SELECT column_1, column_2 FROM table ORDER BY column_1 ASC/DESC
+-- - SELECT column_1, column_2, column_3 FROM table ORDER BY column_1, column_2
+--      → column_1에 대해 먼저 정렬하고 column_2를 이후에 정렬한다
+-- - SELECT column_1, column_2, column_3 FROM table 
+--    ORDER BY column_1 DESC, column_2 ASC  
+--      → 개별로 가능
+-- - SELECT 에 존재하지 않는 column도 ORDER BY 할 수 있지만 논리적으로 별로다
