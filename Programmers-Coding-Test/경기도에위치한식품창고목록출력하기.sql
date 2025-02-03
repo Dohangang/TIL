@@ -26,3 +26,15 @@ SELECT
 FROM FOOD_WAREHOUSE
 WHERE ADDRESS LIKE '%경기%'
 ORDER BY WAREHOUSE_ID ASC;
+
+-- ORDER BY는 결과를 정렬할 때 사용, ASC는 오름차순 DESC는 내림차순, 숫자뿐만 아니라 문자들도 가능
+-- ORDER BY 나이 DESC, 가입일 ASC  <--- 과 같이 여러개를 쓸 수도 있어.
+-- 실행의 순서는 
+-- FROM (테이블 선택)
+-- WHERE (필터링)
+-- GROUP BY (그룹화)
+-- HAVING (그룹 결과 필터링)
+-- SELECT (열 선택)
+-- ORDER BY (정렬)
+-- LIMIT (출력 제한)
+-- 로 되고, 이에 맞춰서 효율을 고려하는게 좋음.
