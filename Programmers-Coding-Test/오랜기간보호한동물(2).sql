@@ -35,3 +35,11 @@ SELECT I.ANIMAL_ID, I.NAME FROM ANIMAL_INS AS I
 JOIN ANIMAL_OUTS AS O ON I.ANIMAL_ID = O.ANIMAL_ID
 ORDER BY (O.DATETIME - I.DATETIME) DESC
 LIMIT 2;
+
+
+-- AS 생략 가능 : AS는 테이블과 컬럼에 별칭(alias)을 부여할 때 선택 사항이라 없어도 된다.
+-- 예: ANIMAL_INS AS I → ANIMAL_INS I (동일하게 동작)
+
+-- O.DATETIME - I.DATETIME 사용 가능 여부:
+-- MySQL, PostgreSQL: DATETIME - DATETIME이 자동으로 시간 차이로 계산됨.
+-- Oracle, SQL Server: 직접 연산 불가. DATEDIFF() 또는 TIMESTAMPDIFF() 사용해야 함.
