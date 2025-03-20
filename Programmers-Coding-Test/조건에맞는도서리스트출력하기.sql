@@ -21,3 +21,7 @@ BOOK 테이블에서 2021년에 출판된 '인문' 카테고리에 속하는 도
 SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d') AS PUBLISHED_DATE FROM BOOK
 WHERE CATEGORY = "인문" AND PUBLISHED_DATE LIKE "2021-%%-%%"
 ORDER BY PUBLISHED_DATE ASC;
+
+-- mysql에서 DATE_FORMAT() 사용하는거 인지하기. DATE와 DATETIME
+-- M,m D,d Y,y로 인해 format이 다르게 나옴
+-- LIKE도 신경써서 외우기
