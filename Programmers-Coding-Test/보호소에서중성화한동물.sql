@@ -39,3 +39,7 @@ WHERE I.SEX_UPON_INTAKE NOT LIKE 'Neutered%'
   AND (O.SEX_UPON_OUTCOME LIKE 'Neutered%' 
        OR O.SEX_UPON_OUTCOME LIKE 'Spayed%')
 ORDER BY I.ANIMAL_ID;
+
+
+-- LIKE 연산자 : 특정 패턴과 일치하는 문자열을 찾을 떄, NOT LIKE 는 그 반대로 일치하지 않는 데이터를 필터링
+-- OR은 여러 개의 조건 중 하나라도 참이라면 선택
