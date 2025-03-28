@@ -37,3 +37,17 @@ ORDER BY PRICE DESC;
 -- FROM Ranked_Food
 -- WHERE rnk = 1
 -- ORDER BY PRICE DESC;
+
+
+-- 추가 학습 정보
+-- - WITH() // 공통 테이블 표현식 CTE, 서브쿼리를 깔끔하게 정리하는 임시 테이블 // 
+-- WITH Temp AS (SELECT ...)
+
+-- - RANK() // 순위 매기는 함수, 데이터 정렬 후 순위 매김(동점 시 건너뜀) // 
+-- RANK() OVER (ORDER BY PRICE DESC)
+
+-- - OVER // 윈도우 함수(RANK, DENSE_RANK, ROW_NUMBER, SUM 등)를 적용하는 범위 지정, 
+-- RANK() OVER (ORDER BY PRICE DESC)
+
+-- -  PARTITION BY // 특정 그룹별로 나눠서 윈도우 함수 적용 // 
+-- PARTITION BY CATEGORY ORDER BY PRICE DESC
