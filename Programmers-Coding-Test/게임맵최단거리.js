@@ -69,3 +69,30 @@ function solution(maps) {
 
   return maps[n - 1][m - 1] > 1 ? maps[n - 1][m - 1] : -1;
 }
+
+// const n = maps.length;
+//     맵의 행(row) 개수를 저장
+// const m = maps[0].length;
+//     맵의 열(column) 개수를 저장
+// const directions = [[-1, 0], [1, 0], [0, -1], [0, 1]];
+//     상(↑), 하(↓), 좌(←), 우(→) 방향 이동을 위한 배열
+// const queue = [[0, 0]];
+//     BFS 탐색을 위한 큐 (초기 위치 (0,0) 삽입)
+// const current = queue.shift();
+//     현재 탐색할 위치를 큐에서 꺼냄
+// for (let i = 0; i < directions.length; i++)
+//     4방향(상, 하, 좌, 우) 탐색을 위한 반복문
+// const dx = directions[i][0], dy = directions[i][1];
+//     현재 방향의 이동량 저장
+// const nx = x + dx, ny = y + dy;
+//     새로운 이동 좌표 계산
+// if (nx >= 0 && ny >= 0 && nx < n && ny < m)
+//     새로운 좌표가 맵의 범위를 벗어나는지 확인
+// if (maps[nx][ny] === 1)
+//     이동 가능한 길(1)인지 확인
+// maps[nx][ny] = maps[x][y] + 1;
+//     이전 거리 값에서 +1을 더해 최단 거리 갱신
+// queue.push([nx, ny]);
+//     이동 가능한 위치를 큐에 추가하여 BFS 진행
+// return maps[n - 1][m - 1] > 1 ? maps[n - 1][m - 1] : -1;
+//     상대 팀 진영에 도착할 수 있으면 거리 반환, 불가능하면 -1 반환
