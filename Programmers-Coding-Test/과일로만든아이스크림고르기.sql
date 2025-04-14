@@ -29,3 +29,11 @@ JOIN ICECREAM_INFO AS I ON F.FLAVOR = I.FLAVOR
 WHERE F.TOTAL_ORDER > 3000
   AND I.INGREDIENT_TYPE = 'fruit_based'
 ORDER BY F.TOTAL_ORDER DESC;
+
+-- =      같다
+-- <>     다르다 (표준)
+-- !=     다르다 (MySQL 등에서 사용 가능)
+-- >      크다
+-- <      작다
+-- >=     크거나 같다
+-- <=     작거나 같다
