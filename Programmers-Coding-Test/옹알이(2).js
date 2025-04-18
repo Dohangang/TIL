@@ -47,3 +47,24 @@ function solution(babbling) {
 //     0
 //   );
 // }
+
+/*
+const fruits = ["apple", "banana", "cherry"];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+출력: apple, banana, cherry
+
+const person = { name: "John", age: 30 };
+
+for (let key in person) {
+  console.log(key, person[key]);
+}
+출력:
+name John
+age 30
+
+for (let x of 배열) → 배열의 요소 하나씩 (값)
+for (let k in 객체) → 객체의 키 하나씩
+*/
