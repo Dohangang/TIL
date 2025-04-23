@@ -20,3 +20,9 @@ FISH_INFO 테이블에서 잡은 물고기 중 가장 큰 물고기의 길이를
 
 SELECT CONCAT(MAX(LENGTH), 'cm') AS MAX_LENGTH
 FROM FISH_INFO;
+
+-- 추가 정보
+-- concat()   length()   upper()   lower()    LEFT(’abcdef’, 3) → abc   RIGHT('abcdef, 3) → def
+-- SELECT LENGTH(first_name) FROM customer
+-- SELECT upper(first_name) || ' ' || upper(last_name) AS full_name FROM customer
+-- SELECT LOWER(LEFT(first_name, 1)) || LOWER(last_name) || ‘@gmail.com’ AS custom_email FROM customer
