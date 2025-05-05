@@ -39,3 +39,13 @@ JOIN HR_DEPARTMENT AS D ON E.DEPT_ID = D.DEPT_ID
 GROUP BY D.DEPT_ID
 ORDER BY ROUND(AVG(E.SAL), 0) DESC;
 
+-- mysql과 postgreSQL이 비슷하지만 섬세하게 다르다는 것을 유의할 것.
+-- 항상 디버깅을 해보고 다름을 알게 되겠지만 미리 알고 정리해두면 더 좋지 않을까 생각함.
+-- 예로
+-- TIMESTAMPZ timestamp와 timezone을 함께 다루는 것은 다를 수 있음
+-- EXTRACT() 비슷하지만 사용 방식의 차이
+-- FACTORIAL() 내장 함수 없음
+-- LOG() 방식이 다름
+-- GCD() LCM()이 없음
+-- 비트 연산자의 구현 방식이 다를 수 있음
+-- TO_CHAR() 비슷한 것 있지만 사용법이 다름
