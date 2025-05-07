@@ -25,3 +25,22 @@ SELECT COUNT(ID) AS FISH_COUNT, MONTH(TIME) AS MONTH
 FROM FISH_INFO
 GROUP BY MONTH
 ORDER BY MONTH ASC
+
+
+
+-- SELECT TO_CHAR(TIME, 'MM') AS MONTH
+-- FROM FISH_INFO;
+-- '01', '02', ..., '09', '10', '11', '12'
+-- 월을 문자열로 출력하면서 항상 두 자릿수로 표현하는 방법
+-- 단, ORDER BY할 땐 문자열 정렬이라 '10'이 '2'보다 먼저 나올 수 있음
+
+
+-- 잡은 물고기가 없는 월도 출력하기 위해선, 
+-- WITH RECURSIVE months AS (
+--     SELECT 1 AS month
+--     UNION ALL
+--     SELECT month + 1
+--     FROM months
+--     WHERE month < 12
+-- )
+-- 와 같이 1~12월을 생성해주고, join하여 출력한다
