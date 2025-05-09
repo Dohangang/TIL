@@ -86,47 +86,64 @@ function solution(str1, str2) {
   const similarity = union === 0 ? 1 : inter / union;
   return Math.floor(similarity * 65536);
 }
-// 위는 도움을 받아 작성한 답. 아래는 본인이 직접 작업하다 포기한 답.
 
-// function isEnglishOnly(str0) {
-//   return /^[a-zA-Z]+$/.test(str0);
-// }
+/*
+위는 도움을 받아 작성한 답. 아래는 본인이 직접 작업하다 포기한 답.
 
-// function solution(str1, str2) {
-//   let separationOfStr1 = [];
-//   let separationOfStr2 = [];
-//   let intersection = [];
+답의 코드 순서대로 설명 ->
+먼저 알파벳인지 검사하는 함수
+문자열을 다중집합 배열로 변환하는 함수 (소문자 변경 및 알파벳만 여과)
+본 함수
+->
+Map()을 활용하여 출현 횟수를 직접 저장
+Map()에서는 중복이 되지 않으므로 둘 매개변수를 합쳐 각 키로부터 최소 최대값을 count
+마무리 <-
 
-//   for (let i = 0; i < str1.length - 1; i++) {
-//     if (isEnglishOnly(str1[i] + str1[i + 1])) {
-//       separationOfStr1.push((str1[i] + str1[i + 1]).toLowerCase());
-//     }
-//   }
+본인이 작성한 코드의 문제점으로는 교집합을 구하는 과정에서 shift를 사용하여 루프 인덱스가 망가짐
+함수화를 하지 않아 코드가 재사용성이 떨어지고 중복됨
+Set이나 Map에 대한 생각을 항상 하자
 
-//   for (let j = 0; j < str2.length - 1; j++) {
-//     if (isEnglishOnly(str2[j] + str2[j + 1])) {
-//       separationOfStr2.push((str2[j] + str2[j + 1]).toLowerCase());
-//     }
-//   }
 
-//   for (let k = 0; k < separationOfStr1.length; k++) {
-//     for (let l = 0; l < separationOfStr2.length; l++) {
-//       if (separationOfStr1[k] == separationOfStr2[l]) {
-//         intersection.push(separationOfStr1[k]);
-//         separationOfStr1.shift();
-//         separationOfStr2.shift();
-//         break;
-//       }
-//     }
-//   }
+function isEnglishOnly(str0) {
+  return /^[a-zA-Z]+$/.test(str0);
+}
 
-//   return separationOfStr1.length + separationOfStr2.length == 0
-//     ? 1
-//     : Math.floor(
-//         65536 *
-//           (intersection.length /
-//             (separationOfStr1.length +
-//               separationOfStr2.length -
-//               intersection.length))
-//       );
-// }
+function solution(str1, str2) {
+  let separationOfStr1 = [];
+  let separationOfStr2 = [];
+  let intersection = [];
+
+  for (let i = 0; i < str1.length - 1; i++) {
+    if (isEnglishOnly(str1[i] + str1[i + 1])) {
+      separationOfStr1.push((str1[i] + str1[i + 1]).toLowerCase());
+    }
+  }
+
+  for (let j = 0; j < str2.length - 1; j++) {
+    if (isEnglishOnly(str2[j] + str2[j + 1])) {
+      separationOfStr2.push((str2[j] + str2[j + 1]).toLowerCase());
+    }
+  }
+
+  for (let k = 0; k < separationOfStr1.length; k++) {
+    for (let l = 0; l < separationOfStr2.length; l++) {
+      if (separationOfStr1[k] == separationOfStr2[l]) {
+        intersection.push(separationOfStr1[k]);
+        separationOfStr1.shift();
+        separationOfStr2.shift();
+        break;
+      }
+    }
+  }
+
+  return separationOfStr1.length + separationOfStr2.length == 0
+    ? 1
+    : Math.floor(
+        65536 *
+          (intersection.length /
+            (separationOfStr1.length +
+              separationOfStr2.length -
+              intersection.length))
+      );
+}
+*/
