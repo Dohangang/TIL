@@ -50,3 +50,16 @@ WHERE USER_ID
     HAVING COUNT(BOARD_ID)>=3
     )
 ORDER BY USER_ID DESC;
+
+/*
+개인적인 의문점에 대한 정보 추가 세가지
+
+INSERT() 함수
+- INSERT(문자열, x번째위치부터, y만큼지우고, 그자리에z삽입)
+
+WHERE과 HAVING의 차이
+- GRUOP BY 전에 WHERE을 쓰고, 후에는 HAVING을 사용
+
+해당 풀이에서는 subquery에 하나의 컬럼만 있어야 한다
+- 메인 쿼리의 단일 컬럼 값과 서브 쿼리의 단일 컬럼 값을 비교해야 하므로 단일 값으로 일치 시켜야한다
+*/
