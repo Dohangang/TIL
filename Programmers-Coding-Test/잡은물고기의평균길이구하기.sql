@@ -24,3 +24,14 @@ FROM (
     SELECT IF(LENGTH IS NULL, 10, LENGTH) AS LENGTH 
     FROM FISH_INFO
 ) AS sub;
+
+/*
+ROUND(123.456, 2) -> 123.45
+ROUND(123.456, -1) -> 120
+TRUNCATE(123.456, 2) -> 123.45
+TRUNCATE(123.456, -1) -> 120
+
+IFNULL(컬럼명, something) -> 컬럼이 NULL이면 something으로 치환하여 반환
+NULLIF(전자, 후자) -> 전자 후자가 같으면 NULL 반환, 다르면 전자 반환
+COALESCE(value1, value2, ...) -> 왼쪽부터 순서대로 NULL값이 아니라면 반환, 모든 값이 NULL이면 NULL 반환
+*/
