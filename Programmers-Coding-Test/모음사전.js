@@ -31,3 +31,13 @@ function solution(words) {
       0
     );
 }
+
+// 📘 요약 주석
+// - 모음 A, E, I, O, U로 만들 수 있는 모든 단어를 사전 순으로 정렬한 순서 찾기
+// - 각 자리에서 가능한 단어 수를 미리 계산해 cases로 저장 (ex. 첫 자리: 5⁴ + 5³ + 5² + 5¹ + 5⁰ = 781)
+// - 단어의 각 자리마다: (현재 글자의 인덱스) × (자리 가중치) + 1 을 누적
+//   → index * cases는 해당 글자보다 앞선 글자들이 만든 단어 수
+//   → +1은 자기 자신(EIO 등 포함)
+// - 결국 A부터 시작해서 word가 나올 때까지 사전 넘기듯 계산하는 방식
+
+// arr.reduce(callback(accumulator, currentValue, index, array), initialValue);  // 누적값, 현재값, 인덱스, 요소), 초기값)
