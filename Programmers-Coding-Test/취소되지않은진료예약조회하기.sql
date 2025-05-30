@@ -54,3 +54,13 @@ WHERE A.MCDP_CD = 'CS'
   AND A.APNT_CNCL_YN = 'N'
   AND DATE(A.APNT_YMD) = '2022-04-13'
 ORDER BY A.APNT_YMD;
+
+-- DATE(A.APNT_YMD) = '2022-04-13'
+-- TIMESTAMP나 DATETIME 타입에서 날짜만 추출해서 비교
+
+-- WHERE A.MCDP_CD = 'CS'
+--   AND A.APNT_CNCL_YN = 'N'
+--   AND DATE(A.APNT_YMD) = '2022-04-13'
+  
+--   AND, = 등 기본 비교 연산자
+-- DATE(컬럼) 함수로 날짜 비교 시 시간 무시하기
