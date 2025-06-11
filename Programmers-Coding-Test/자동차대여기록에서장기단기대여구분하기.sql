@@ -30,3 +30,7 @@ SELECT
 FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
 WHERE START_DATE BETWEEN '2022-09-01' AND '2022-09-30'
 ORDER BY HISTORY_ID DESC;
+
+-- DATEDIFF(date1, date2) -> date1 - date2 의 날짜 차이를 '일 단위 정수'로 반환
+-- TIMEDIFF()는 두 기간 사이의 시간 계산이다
+-- 29를 쓴 이유는 실제 대여일 수가 30일이 되려면 (30-1) = 29, 즉 1,2,3,4, ... , 29,30 임을 이해하면 된다
