@@ -49,3 +49,12 @@ GROUP BY
 ORDER BY 
     A.AUTHOR_ID ASC,
     B.CATEGORY DESC;
+
+
+-- GROUP BY는 같은 값을 가지는 행들끼리 묶어서(그룹화해서) 집계 함수(예: SUM, AVG, COUNT)를 적용할 때 사용
+-- 주의 : SELECT절에 쓰이는 컬럼은 반드시 GROUP BY절에 포함되거나 집계 함수로 감싸야 함
+
+
+-- HAVING은 GROUP BY로 그룹화된 결과에 조건을 걸 때 사용하는 절 (WHERE과 비슷함)
+-- - WHERE은 그룹화 전에 조건을 걸고,
+-- - HAVING은 그룹화 후 조건을 거는 겁니다.
