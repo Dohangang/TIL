@@ -42,3 +42,8 @@ GROUP BY
     U.GENDER
 ORDER BY 
     YEAR, MONTH, GENDER ASC;
+
+
+-- GROUP BY에서 명확하게 O.SALES_DATE와 같이 써야할 것
+-- 동일한 사용자라도 여러 번 구매하면 중복 집계될 수 있다는 점을 간과함
+-- EXTRACT(YEAR FROM O.SALES_DATE) 방식과 YEAR(O.SALES_DATE) 방식 둘다 가능하지만. ANSI SQL 표준 협회에서 표준이 되는건 EXTRACT
