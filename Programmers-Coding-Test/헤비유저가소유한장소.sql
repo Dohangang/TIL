@@ -23,3 +23,8 @@ WHERE HOST_ID IN (
     HAVING COUNT(*) >= 2
 )
 ORDER BY ID;
+
+-- 스칼라 서브쿼리(Scalar Subquery)는 주로 SELECT 절이나 다른 쿼리의 일부로서 단일 값을 반환하는 서브쿼리
+-- IN 안에 NULL이 포함되면 예상과 다를 수도?
+-- 서브쿼리를 쓸 때면 항상 JOIN과의 성능 비교가 있는 듯 하다
+-- 복잡하면 WITH가 있다는 것을 잊지말자
