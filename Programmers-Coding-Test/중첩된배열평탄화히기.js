@@ -24,3 +24,7 @@ function flatten(arr) {
 // function flatten(arr) {
 //   return arr.flat(Infinity);
 // }
+
+// 첫번째 함수, 자기 자신을 다시 호출하는 함수를 사용 (재귀), 중첩의 중첩들까지도 평탄화한다. ...flatten이라는 전개연산(spread operator)
+// 배열인지 아닌지 검사하고 싶을 떄 -> Array.isArray(value)를 사용. true false 반환.
+// 두번째 함수, arr.flat(depth) -> 평탄화를 진행할 깊이를 숫자로 지정, 생략 시 기본값은 1, Infinity는 모든 것을 평탄화.
