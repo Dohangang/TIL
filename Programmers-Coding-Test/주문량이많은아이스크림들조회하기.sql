@@ -40,4 +40,31 @@ FROM (
 ORDER BY TOTAL DESC
 LIMIT 3;
 
+-- WITH ALL_ORDERS AS (
+--     SELECT FLAVOR, TOTAL_ORDER FROM FIRST_HALF
+--     UNION ALL
+--     SELECT FLAVOR, TOTAL_ORDER FROM JULY
+-- ),
+-- FLAVOR_TOTALS AS (
+--     SELECT FLAVOR, SUM(TOTAL_ORDER) AS TOTAL
+--     FROM ALL_ORDERS
+--     GROUP BY FLAVOR
+-- )
+-- SELECT FLAVOR
+-- FROM FLAVOR_TOTALS
+-- ORDER BY TOTAL DESC
+-- LIMIT 3;
 
+-- UNION ALL : 쿼리의 결과를 합쳐서 하나의 결과를 만드는 명령, 중복 가능 그래서 좀 더 빠름 (UNION은 자동 중복 제거, 좀 더 느림)
+
+--       SELECT column1, column2 FROM tableA
+--       UNION ALL
+--       SELECT column1, column2 FROM tableB;
+
+-- CTE(Common Table Expression) : 임시 테이블로 분리, 이름을 붙여 사용, 가독성과 재사용성을 높임.
+     
+--       WITH CTE_NAME AS (
+--           SELECT ...
+--       )
+--       SELECT ...
+--       FROM CTE_NAME
