@@ -29,3 +29,19 @@ SELECT
 FROM SUBWAY_DISTANCE
 GROUP BY ROUTE
 ORDER BY ROUND(SUM(D_BETWEEN_DIST), 1) DESC;
+
+-- sql 구문 중에 alias(별칭)을 AS 뒤에 지정하는 것 외에 작성해도 되는 곳
+--     SELECT COUNT(*) AS <ALIAS>
+--     ORDER BY <ALIAS> DESC
+--     HAVING ALIAS > 10
+-- 안되는 곳
+--     WHERE -> 아직 alias가 생성되기 전 단계라 별칭 사용 불가
+--     GROUP BY -> 본래 컬럼 표현으로 그룹화 해야함
+
+-- CONCAT() -> 문자열을 이어붙이는 함수, NULL이 포함되면 NULL이 되어버림, 숫자도 문자열로 자동 변환됨
+-- ROUND(숫자, 만들고 싶은 자릿수) -> 반올림
+-- CEIL(3.1) → 4 올림
+-- FLOOR(3.9) → 3 내림
+-- TRUNCATE(3.1415, 2) → 3.14 특정 자리에서 잘라서 반환
+
+-- 정렬 기준은 숫자로 할 것, 위의 sql문을 예로 들자면 km때문에 오름 내림차순이 망가질 수 있음.
