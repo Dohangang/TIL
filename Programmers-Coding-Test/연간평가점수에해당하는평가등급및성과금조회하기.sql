@@ -75,3 +75,8 @@ JOIN (
 ) G ON E.EMP_NO = G.EMP_NO
 ORDER BY E.EMP_NO ASC;
 
+-- CASE WHEN THEN ELSE END AS -> 구성 까먹지 말기
+-- 집계 함수를 썼을 경우에 GROUP BY를 잊지 말 것
+
+-- SELECT 부분에 쓰여져 출력되는 칸에는 여러 변형이 가능한데, 아래 부분에서 모든 것을 예쁘게 만들어서 출력하려하면 문제를 해결할 때 머리가 안굴러갈 수 있다.
+-- 생각의 영역을 넓힐 것
