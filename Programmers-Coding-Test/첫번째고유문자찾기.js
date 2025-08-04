@@ -27,3 +27,17 @@ function firstUniqChar(s) {
   }
   return -1;
 }
+
+// for (let x of 배열) → 배열의 요소 하나씩 (값)
+// for (let k in 객체) → 객체의 키 하나씩
+
+// for (const element of iterable) : iterable의 각 요소를 순회하는 반복문 (문자열, 배열, Set 등에 사용)
+//    const str = "hello";
+//    for (const char of str) {
+//    console.log(char); // h, e, l, l, o 순서대로 출력
+//    }
+
+// key in object : 객체에서 key가 존재하는지 확인하는 연산자, true or false
+//    const pairs = { ')': '(', ']': '[', '}': '{' };
+//    console.log(')' in pairs); // true
+//    console.log('(' in pairs); // false
