@@ -47,3 +47,25 @@ WHERE
     )
 ORDER BY 
     i.ITEM_ID DESC;
+
+
+-- ITEM_TREE에 PARENT_ITEM_ID가 존재하면 누군가의 부모라 업그레이드 된다
+-- NOT IN은 안들어있는, 즉 없는 것만 필터링 하는 것, NULL이 있으면 오류가 있을 수 있다
+-- 서브쿼리 없이 JOIN을 통해 직관적으로 하는 아래 방법, NULL값 오류 이슈도 없음
+
+-- SELECT 
+--     i.ITEM_ID,
+--     i.ITEM_NAME,
+--     i.RARITY
+-- FROM 
+--     ITEM_INFO AS i
+-- JOIN 
+--     ITEM_TREE AS t
+--     ON i.ITEM_ID = t.ITEM_ID
+-- LEFT JOIN 
+--     ITEM_TREE AS child
+--     ON i.ITEM_ID = child.PARENT_ITEM_ID
+-- WHERE 
+--     child.PARENT_ITEM_ID IS NULL
+-- ORDER BY 
+--     i.ITEM_ID DESC;
