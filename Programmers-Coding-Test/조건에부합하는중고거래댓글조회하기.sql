@@ -44,3 +44,15 @@ JOIN USED_GOODS_REPLY AS R
   ON B.BOARD_ID = R.BOARD_ID
 WHERE DATE_FORMAT(B.CREATED_DATE, '%Y-%m') = '2022-10'
 ORDER BY R.CREATED_DATE ASC, B.TITLE ASC;
+
+-- sql 구문 중에 alias(별칭)을 AS 뒤에 지정하는 것 외에 작성해도 되는 곳
+--     SELECT COUNT(*) AS <ALIAS>
+--     ORDER BY <ALIAS> DESC
+--     HAVING ALIAS > 10
+-- 안되는 곳
+--     WHERE -> 아직 alias가 생성되기 전 단계라 별칭 사용 불가
+--     GROUP BY -> 본래 컬럼 표현으로 그룹화 해야함
+
+
+-- 실행되는 논리적 순서 
+-- FROM JOIN WHERE SELECT ORDERBY 인듯?
