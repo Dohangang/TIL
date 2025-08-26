@@ -52,3 +52,10 @@ HAVING
 ORDER BY
    total_amount DESC; 
       
+-- -`WHERE` vs `HAVING`
+-- `WHERE`: GROUP BY로 데이터를 그룹화하기 전, 테이블의 개별 행(row)을 필터링하는 조건(예: "가입일이 2023년 이후인 사용자만", "주문 상태가 'completed'인 것만")
+-- `HAVING`: GROUP BY로 데이터를 그룹화한 후, 그룹화된 결과에 대한 조건을 거는 필터. SUM(), COUNT() 같은 집계 함수에 대한 조건을 걸 때 사용 (예: "주문액 총합이 500을 넘는 그룹만")
+-- 실행 순서: FROM/JOIN → WHERE → GROUP BY → HAVING → SELECT → ORDER BY 순으로 동작
+
+-- -집계 함수(`SUM`)와 `GROUP BY`의 조합
+-- GROUP BY u.user_id에 의해 "사용자별로" 금액을 더하게 됨. GROUP BY는 집계 함수가 계산할 단위를 지정해주는 역할
