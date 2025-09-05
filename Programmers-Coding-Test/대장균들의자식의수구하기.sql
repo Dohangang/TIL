@@ -28,3 +28,30 @@ LEFT JOIN ECOLI_DATA E2
     ON E1.ID = E2.PARENT_ID
 GROUP BY E1.ID
 ORDER BY E1.ID;
+
+-- 조직도: 직원, 상사
+-- 상품 카테고리: 대분류, 소분류
+-- 게시판 댓글: 부모 댓글, 자식 댓글
+-- 등과 같이 한 테이블 안에 계층 구조나 연결 정보가 있을 때, 연결 짓고자 하는 것을 나타내기 위해 실제로 사용할 수 있으니 알아둘 것
+
+-- 🌟 공통 테이블 표현식 (CTE, common table expression):
+-- WITH 및 WITH RECURSIVE는 공통 테이블 표현식을 정의하는 데 사용되는 sql 구문, 
+-- 쿼리 내에 임시 결과 집합을 정의하고 그것을 다른 쿼리에서 참조할 수 있게 한다
+
+--       WITH 구문
+--       주 사용: 임시 테이블 명의 사용하여 값을 참조, 연산할 경우
+--       WITH 임시테이블명 AS (
+--           SELECT *
+--           FROM 테이블명
+--       )
+
+--       WITH RECURSIVE 구문
+--       주 사용: 임시 테이블을 생성하면서 자신의 값을 참조하여 값을 연산할 경우, 계층적 데이터 구조를 연산할 경우
+--       WITH RECURSIVE 임시테이블명 AS (
+--           SELECT *                초기값 설정
+--           FROM 테이블명
+--           UNION ALL
+--           SELECT *                재귀식 설정
+--           FROM 임시테이블명
+--           WHERE                   정지 조건
+--       )
