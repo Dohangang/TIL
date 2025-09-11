@@ -39,3 +39,21 @@ WHERE FI.LENGTH = (
     WHERE FISH_TYPE = FI.FISH_TYPE
 )
 ORDER BY FI.ID ASC;
+
+-- GROUP BY를 사용하면 안되는 이유는 ID때문이다.
+-- 본인은 처음에 GROUP BY를 사용하여 MAX(LENGTH)를 출력하려 했지만, ID가 SELECT문에 존재하기 때문에
+-- ID와 FISH_NAME이 GROUP화 되면 MAX()를 쓴 것이 의미가 없다. 
+-- 즉 ID, FISH_NAME 값이 완전히 같은 행끼리만 묶이는 결과로 이어져 원하는 결과를 얻지 못한다. 그룹핑이 의미가 없다
+
+
+-- SELECT ID, FISH_NAME, LENGTH
+-- FROM (
+--     SELECT FI.ID, FNI.FISH_NAME, FI.LENGTH,
+--            RANK() OVER(PARTITION BY FI.FISH_TYPE ORDER BY FI.LENGTH DESC) AS RANKING
+--     FROM FISH_INFO AS FI
+--     JOIN FISH_NAME_INFO AS FNI ON FI.FISH_TYPE = FNI.FISH_TYPE
+-- ) T
+-- WHERE RANKING = 1
+-- ORDER BY ID ASC;
+
+-- 윈도우 함수: 함수명() OVER( PARTITION BY 그룹컬럼 ORDER BY 정렬컬럼 ) -> 서브쿼리 활용보다 더 직관적이라는 평이다.
