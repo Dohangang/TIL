@@ -15,3 +15,28 @@
 function solution(str) {
   return str.split(" ").sort((a, b) => b.length - a.length)[0];
 }
+
+// function solution(str) {
+//   const words = str.split(" ");
+//   let longest = "";
+
+//   for (let word of words) {
+//     if (word.length > longest.length) {
+//       longest = word;
+//     }
+//   }ㄴ
+
+//   return longest;
+// }
+
+// split으로 문자열을 배열로 -> for문으로 긴 단어 교체
+// 위의 첫 번째 코드는 코드가 짧고 직관적이나 sort에서 시간 복잡도를 더 길게 잡힘.
+// 그래서 for문의 O(n)이 더 효과적이며 기본에 충실함.
+
+// function solution(str) {
+//   return str
+//     .split(' ')
+//     .reduce((longest, word) => word.length > longest.length ? word : longest, "");
+// }
+
+// for문처럼 O(n)만에 끝나고 코드도 짧고 깔끔함.
