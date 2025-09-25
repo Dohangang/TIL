@@ -48,3 +48,10 @@ SELECT
 FROM EMP_HOURS H
 JOIN MAX_HOURS M ON H.DEPT = M.DEPT AND H.TOTAL_HOURS = M.MAX_TOTAL
 ORDER BY H.DEPT ASC, H.NAME ASC;
+
+-- MAX_HOURS를 만들어야 하는 이유에 대해 논리적으로 이해하는데 약간 시간을 소모했다.
+-- EMP_HOURS를 통해서 바로 MAX를 사용하여 SELECT을 하면 되지 않을까 생각했지만, 문제에서 SELECT문에 H.NAME이 들어가 있기 때문에
+-- GROUP BY에도 역시 H.NAME을 넣어야 오류가 나지 않는데, H.NAME을 넣는다면 기존의 EMP_HOURS와 똑같은 결과값이다. 
+-- 그렇기 때문에 (1)직원별 총 시간 (2)부서별 최댓값 을 구해서 그 둘의 시간 값이 같은 사람을 뽑는 절차를 추가해주어야 한다.
+-- 서브쿼리를 사용해도 좋지만 남들이 보기 좋은 것은 CTE라고 한다.
+-- (본인은 서브쿼리가 더 직관적으로 보기 좋음, 엄청 길고 복잡한 쿼리가 된다면 모르겠지만 현 시점엔 그러함.)
