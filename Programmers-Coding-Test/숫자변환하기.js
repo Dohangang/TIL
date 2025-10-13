@@ -49,3 +49,7 @@ function solution(x, y, n) {
 
 //   return -1;
 // }
+
+// -- BFS로 풀면 queueMicrotask.shift()로 인해 비용이 크다. dp는 단순 순회라서 훨씬 빠르다.
+// -- dp의 길이가 y+1 이라는 것과 Infinity가 안전하다는 것을 생각할 것.
+// -- 혼자 못풀었고, 답을 보고도 이해가 제대로 가지 않는다.
