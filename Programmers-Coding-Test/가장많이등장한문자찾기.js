@@ -28,3 +28,23 @@ function solution(str) {
   candidates.sort();
   return candidates[0];
 }
+
+// function solution(str) {
+//   const freq = new Array(26).fill(0);
+
+//   for (const ch of str.toLowerCase()) {
+//     if (ch < 'a' || ch > 'z') continue;
+//     freq[ch.charCodeAt(0) - 97]++;
+//   }
+
+//   const maxCount = Math.max(...freq);
+//   if (maxCount === 0) return "";
+
+//   const idx = freq.indexOf(maxCount);
+//   return String.fromCharCode(idx + 97);
+// }
+
+// new Array(26).fill(0) -> 길이 26짜리 배열을 만들고, 모든 요소를 0으로 채움
+// if (ch < 'a' || ch > 'z') -> 문자가 'a'~'z'범위 밖인지 확인하는 조건식, JS에서는 문자끼리 비교 시 자동으로 유니코드(아스키 코드) 값을 비교함
+// charCodeAt(index) -> 문자열의 index번째 문자의 유니코드(아스키) 코드 값을 반환
+// String.fromCharCode(number) -> 유니코드(아스키) 코드 값을 문자로 변환
