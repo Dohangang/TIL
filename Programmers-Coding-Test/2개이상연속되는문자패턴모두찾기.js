@@ -28,3 +28,13 @@ function solution(str) {
 
   return result;
 }
+
+// start를 통해서 필요한 부분을 한쪽에 저장해놓는 생각을 자주 생각하면 좋은 것 같다.
+// 마지막 요소까지 고려하여 +1을 하는 것을 고려
+// slice(start, end) -> start 이상 end 미만 ->  "abcdef".slice(1, 4) → "bcd"
+// 'a' !== undefined → true
+
+// 1. 연속되는 문자의 길이를 센다
+// 2. 연속이 끊기면 이전 구간을 검사한다
+// 3. 2개 이상이면 결과에 추가
+// 4. 새 구간 시작점 업데이트
