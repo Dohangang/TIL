@@ -39,3 +39,28 @@ LEFT JOIN ANIMAL_OUTS AS A
   ON HOUR(A.DATETIME) = H.HOURTERM
 GROUP BY HOURTERM
 ORDER BY HOURTERM;
+
+
+-- 🌟sql 구문 중에 alias(별칭)을 AS 뒤에 지정하는 것 외에 작성해도 되는 곳
+--     SELECT COUNT(*) AS <ALIAS>
+--     ORDER BY <ALIAS> DESC
+--     HAVING ALIAS > 10
+-- 안되는 곳
+--     WHERE -> 아직 alias가 생성되기 전 단계라 별칭 사용 불가
+--     GROUP BY -> 본래 컬럼 표현으로 그룹화 해야함
+
+-- 🌟UNION ALL : 쿼리의 결과를 합쳐서 하나의 결과를 만드는 명령, 중복 가능 그래서 좀 더 빠름 (UNION은 자동 중복 제거, 좀 더 느림)
+--       SELECT column1, column2 FROM tableA
+--       UNION ALL
+--       SELECT column1, column2 FROM tableB;
+
+-- 🌟CTE(Common Table Expression) : 임시 테이블로 분리, 이름을 붙여 사용, 가독성과 재사용성을 높임.
+--       WITH CTE_NAME AS (
+--           SELECT ...
+--       )
+--       SELECT ...
+--       FROM CTE_NAME
+
+-- 🌟COALESCE(표현식1, 표현식2, ...)
+-- 첫 번째로 NULL이 아닌 값을 반환합니다.
+-- 전부 NULL이면 마지막 값이 반환됩니다.
